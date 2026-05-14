@@ -1,52 +1,53 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%; /* Slightly softer dark for text */
+    --background: 210 40% 99%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
-    --primary: 25 85% 60%; /* Warm Orange */
-    --primary-foreground: 0 0% 100%; /* White for primary text */
-    --secondary: 135 60% 50%; /* Fresh Green */
-    --secondary-foreground: 0 0% 100%; /* White for secondary text */
-    --muted: 45 90% 65%; /* Soft Yellow */
-    --muted-foreground: 0 0% 40%; /* Darker muted text */
-    --accent: 25 85% 60%; /* Using primary orange as accent */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 50%; /* Adjusted destructive for palette */
-    --destructive-foreground: 0 0% 100%;
-    --border: 25 60% 80%; /* Lighter orange border */
-    --input: 25 60% 80%; /* Lighter orange input border */
-    --ring: 25 85% 60%; /* Primary orange for rings */
-    --radius: 1rem; /* Slightly more rounded corners */
+    --popover-foreground: 222 47% 11%;
+    --primary: 12 90% 64%; /* Coral/Peach */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 12 90% 64%;
+    --accent-foreground: 222 47% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 12 90% 64%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    /* Dark mode colors - can be adjusted to complement the cuter theme */
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 45 90% 65%; /* Soft Yellow in dark mode */
-    --primary-foreground: 0 0% 15%;
-    --secondary: 135 60% 40%; /* Darker Green */
-    --secondary-foreground: 0 0% 100%;
-    --muted: 25 85% 50%; /* Darker Orange */
-    --muted-foreground: 0 0% 70%;
-    --accent: 45 90% 55%; /* Darker Yellow */
-    --accent-foreground: 0 0% 15%;
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 25 60% 25%; /* Darker orange border */
-    --input: 25 60% 25%; /* Darker orange input border */
-    --ring: 45 90% 65%; /* Yellow for rings */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 12 90% 64%;
+    --primary-foreground: 222 47% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 12 90% 64%;
   }
 }
 
@@ -55,6 +56,20 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  }
+}
+
+/* Custom Utilities for Premium Look */
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl border border-white/20 dark:border-slate-800/20;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-400;
+  }
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
   }
 }
