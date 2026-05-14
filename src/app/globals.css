@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%; /* Slightly softer dark for text */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 25 85% 60%; /* Warm Orange */
+    --primary-foreground: 0 0% 100%; /* White for primary text */
+    --secondary: 135 60% 50%; /* Fresh Green */
+    --secondary-foreground: 0 0% 100%; /* White for secondary text */
+    --muted: 45 90% 65%; /* Soft Yellow */
+    --muted-foreground: 0 0% 40%; /* Darker muted text */
+    --accent: 25 85% 60%; /* Using primary orange as accent */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%; /* Adjusted destructive for palette */
+    --destructive-foreground: 0 0% 100%;
+    --border: 25 60% 80%; /* Lighter orange border */
+    --input: 25 60% 80%; /* Lighter orange input border */
+    --ring: 25 85% 60%; /* Primary orange for rings */
+    --radius: 1rem; /* Slightly more rounded corners */
+  }
+
+  .dark {
+    /* Dark mode colors - can be adjusted to complement the cuter theme */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 45 90% 65%; /* Soft Yellow in dark mode */
+    --primary-foreground: 0 0% 15%;
+    --secondary: 135 60% 40%; /* Darker Green */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 25 85% 50%; /* Darker Orange */
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 90% 55%; /* Darker Yellow */
+    --accent-foreground: 0 0% 15%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 25 60% 25%; /* Darker orange border */
+    --input: 25 60% 25%; /* Darker orange input border */
+    --ring: 45 90% 65%; /* Yellow for rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
